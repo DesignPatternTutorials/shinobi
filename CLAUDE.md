@@ -14,6 +14,13 @@ Shinobi is a small practice project for learning Claude Code: a Bootstrap 5 blog
 
 There is no build step, linter or test suite.
 
+## Git workflow
+
+- Never commit or push directly to `main`. `main` only receives merges from `develop`.
+- `develop` is the integration branch. Do all work on a feature branch created from `develop`, named `feature/<short-description>` (or `fix/<short-description>` for bug fixes).
+- Push the feature branch and open a pull request into `develop`. Do not merge it yourself unless asked.
+- Use Conventional Commits for every commit message: `<type>(<optional scope>): <summary>`. Types are `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `build`, `ci` and `perf`. Mark a breaking change with `!` after the type or with a `BREAKING CHANGE:` footer.
+
 ## Architecture
 
 - **`server.js`**: a single Express app (CommonJS). It serves `public/` statically and exposes a REST API under `/api/posts` (list, get, create, update, delete). Every request reads and rewrites the whole of `data/posts.json` synchronously; there is no database or cache. `validatePost` requires a non-empty `title`, `author` and `body`. The server generates `id` (`crypto.randomUUID()`), `createdAt` and `updatedAt` (ISO strings). The list endpoint sorts newest first by `createdAt`.
