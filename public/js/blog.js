@@ -69,9 +69,9 @@ function renderPosts() {
         <article class="card h-100 post-card">
           <div class="card-body">
             <h2 class="card-title h4">${escapeHtml(post.title)}</h2>
-            <h6 class="card-subtitle mb-3 text-muted">
-              <i class="bi bi-person"></i> ${escapeHtml(post.author)}
-              &middot; ${formatDate(post.createdAt)}${edited}
+            <h6 class="card-subtitle mb-3 text-muted d-flex align-items-center gap-2">
+              ${avatarHtml(post.author)}
+              <span>${escapeHtml(post.author)} &middot; ${formatDate(post.createdAt)}${edited}</span>
             </h6>
             <p class="card-text post-body">${escapeHtml(post.body)}</p>
           </div>
@@ -105,7 +105,7 @@ function openPostModal(post = null) {
   document.getElementById('postModalTitle').textContent = post ? 'Edit Post' : 'New Post';
   fields.id.value = post ? post.id : '';
   fields.title.value = post ? post.title : '';
-  fields.author.value = post ? post.author : '';
+  fields.author.value = post ? post.author : CURRENT_USER.name;
   fields.body.value = post ? post.body : '';
   postModal.show();
 }
