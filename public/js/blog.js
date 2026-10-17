@@ -63,7 +63,7 @@ function renderPosts() {
 
   postList.innerHTML = posts.map((post) => {
     const edited = post.updatedAt !== post.createdAt
-      ? `<span class="badge text-bg-light ms-2">edited</span>` : '';
+      ? `<span class="badge bg-body-secondary text-body ms-2">edited</span>` : '';
     return `
       <div class="col-md-6">
         <article class="card h-100 post-card">
