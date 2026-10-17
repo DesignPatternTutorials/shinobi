@@ -1,0 +1,13 @@
+{
+  "name": "shinobi",
+  "version": "1.0.0",
+  "description": "A small Bootstrap blog with JSON file storage, for learning Claude Code",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

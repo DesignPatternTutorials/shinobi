@@ -1,0 +1,18 @@
+[
+  {
+    "id": "8f1c2a4e-1b3d-4c5e-9f60-1a2b3c4d5e01",
+    "title": "Welcome to Shinobi",
+    "author": "Ninja Admin",
+    "body": "This is the first post on the Shinobi blog.\n\nPosts are stored in data/posts.json, so anything you add, edit or delete here is saved to that file.",
+    "createdAt": "2026-10-17T09:00:00.000Z",
+    "updatedAt": "2026-10-17T09:00:00.000Z"
+  },
+  {
+    "id": "8f1c2a4e-1b3d-4c5e-9f60-1a2b3c4d5e02",
+    "title": "The Way of the Silent Coder",
+    "author": "Ninja Admin",
+    "body": "A true shinobi writes small functions, names things clearly, and commits often.\n\nTry editing this post with the Edit button below.",
+    "createdAt": "2026-10-17T10:00:00.000Z",
+    "updatedAt": "2026-10-17T10:00:00.000Z"
+  }
+]
