@@ -26,6 +26,19 @@ main {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
 }
 
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  user-select: none;
+}
+
 .showcase-section {
   scroll-margin-top: 5rem;
 }
