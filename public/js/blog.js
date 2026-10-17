@@ -156,6 +156,9 @@ document.getElementById('confirmDeleteBtn').addEventListener('click', async () =
 
 document.getElementById('newPostBtn').addEventListener('click', () => openPostModal());
 
+// Put the cursor in Title once the modal has finished opening
+document.getElementById('postModal').addEventListener('shown.bs.modal', () => fields.title.focus());
+
 postList.addEventListener('click', (e) => {
   const button = e.target.closest('button[data-action]');
   if (!button) return;
@@ -173,3 +176,9 @@ postList.addEventListener('click', (e) => {
 });
 
 loadPosts();
+
+// Links such as the About page's "Start writing" use /#new to open the form
+if (location.hash === '#new') {
+  history.replaceState(null, '', location.pathname);
+  openPostModal();
+}

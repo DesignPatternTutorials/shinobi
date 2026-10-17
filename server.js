@@ -8,7 +8,8 @@ const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'posts.json');
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+// extensions lets /about serve about.html
+app.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
 
 // --- JSON file helpers ---
 
@@ -93,6 +94,17 @@ app.delete('/api/posts/:id', (req, res) => {
   }
   writePosts(remaining);
   res.status(204).end();
+});
+
+// --- Not found ---
+
+// Unknown API routes get JSON so api() in blog.js can show the message
+app.use('/api', (req, res) => {
+  res.status(404).json({ error: 'Not found' });
+});
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
 app.listen(PORT, () => {

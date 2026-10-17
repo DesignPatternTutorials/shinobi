@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Shinobi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="/js/theme.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/"><i class="bi bi-moon-stars-fill me-2"></i>Shinobi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/showcase.html">Bootstrap Showcase</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0">
+          <span id="userAvatar" role="img"></span>
+          <button class="btn btn-outline-light btn-sm" type="button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+            <i class="bi bi-circle-half"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero about-hero py-5">
+    <div class="container py-lg-4">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-7">
+          <span class="badge rounded-pill text-bg-warning mb-3"><i class="bi bi-stars me-1"></i>About Shinobi</span>
+          <h1 class="display-4 fw-bold mb-3">Quiet tools for<br>loud ideas.</h1>
+          <p class="lead text-white text-opacity-75 mb-4">
+            Shinobi is a small, friendly blog built to learn by doing. It is plain HTML, Bootstrap and a
+            little JavaScript, with every post kept in a single JSON file. No frameworks, no build step and nothing to hide.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-warning btn-lg" href="/"><i class="bi bi-journal-text me-1"></i>Read the blog</a>
+            <a class="btn btn-outline-light btn-lg" href="/showcase.html"><i class="bi bi-grid-1x2 me-1"></i>See the showcase</a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="about-emblem mx-auto" aria-hidden="true">
+            <i class="bi bi-moon-stars-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Stats strip -->
+    <section class="bg-body-secondary border-bottom" aria-label="Shinobi at a glance">
+      <div class="container">
+        <div class="row text-center g-0 about-stats">
+          <div class="col-6 col-md-3 py-4">
+            <div class="fs-2 fw-bold">1</div>
+            <div class="small text-body-secondary">JSON file for all posts</div>
+          </div>
+          <div class="col-6 col-md-3 py-4">
+            <div class="fs-2 fw-bold">5</div>
+            <div class="small text-body-secondary">REST endpoints</div>
+          </div>
+          <div class="col-6 col-md-3 py-4">
+            <div class="fs-2 fw-bold">0</div>
+            <div class="small text-body-secondary">Build steps</div>
+          </div>
+          <div class="col-6 col-md-3 py-4">
+            <div class="fs-2 fw-bold">2</div>
+            <div class="small text-body-secondary">Themes, light and dark</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What it is -->
+    <section class="container py-5">
+      <div class="text-center mx-auto mb-5" style="max-width: 40rem;">
+        <h2 class="fw-bold">What's inside</h2>
+        <p class="text-body-secondary mb-0">Everything you need to write, keep and show off a handful of posts, and nothing you don't.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 bg-body-tertiary">
+            <div class="card-body p-4">
+              <div class="about-icon text-bg-primary mb-3" aria-hidden="true"><i class="bi bi-pencil-square"></i></div>
+              <h3 class="h5 fw-semibold">Write freely</h3>
+              <p class="text-body-secondary mb-0">Create, edit and delete posts from one tidy modal. Changes save straight away.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 bg-body-tertiary">
+            <div class="card-body p-4">
+              <div class="about-icon text-bg-success mb-3" aria-hidden="true"><i class="bi bi-filetype-json"></i></div>
+              <h3 class="h5 fw-semibold">Plain storage</h3>
+              <p class="text-body-secondary mb-0">Posts live in <code class="text-body-emphasis">data/posts.json</code>. Open it, read it and edit it by hand if you like.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 bg-body-tertiary">
+            <div class="card-body p-4">
+              <div class="about-icon text-bg-warning mb-3" aria-hidden="true"><i class="bi bi-circle-half"></i></div>
+              <h3 class="h5 fw-semibold">Light or dark</h3>
+              <p class="text-body-secondary mb-0">Follows your system theme, or pick one yourself. Shinobi remembers your choice.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 bg-body-tertiary">
+            <div class="card-body p-4">
+              <div class="about-icon text-bg-danger mb-3" aria-hidden="true"><i class="bi bi-grid-1x2"></i></div>
+              <h3 class="h5 fw-semibold">Bootstrap tour</h3>
+              <p class="text-body-secondary mb-0">The showcase page puts every common Bootstrap 5 component side by side.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="bg-body-tertiary py-5">
+      <div class="container">
+        <div class="row g-4 g-lg-5 align-items-center">
+          <div class="col-lg-5">
+            <h2 class="fw-bold">How it works</h2>
+            <p class="text-body-secondary">
+              A single Express server hands out the pages and a small REST API. The browser does the rest:
+              it fetches posts, renders them as cards and sends your changes back.
+            </p>
+            <p class="text-body-secondary mb-0">
+              It is deliberately small, so you can read the whole thing in an afternoon and change it with confidence.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <ol class="list-unstyled about-steps mb-0">
+              <li class="d-flex gap-3 mb-4">
+                <span class="about-step-num" aria-hidden="true">1</span>
+                <div>
+                  <h3 class="h6 fw-semibold mb-1">You write a post</h3>
+                  <p class="text-body-secondary mb-0">The form checks the title, author and body before anything is sent.</p>
+                </div>
+              </li>
+              <li class="d-flex gap-3 mb-4">
+                <span class="about-step-num" aria-hidden="true">2</span>
+                <div>
+                  <h3 class="h6 fw-semibold mb-1">The API saves it</h3>
+                  <p class="text-body-secondary mb-0">Express gives it an ID and timestamps, then writes it to the JSON file.</p>
+                </div>
+              </li>
+              <li class="d-flex gap-3">
+                <span class="about-step-num" aria-hidden="true">3</span>
+                <div>
+                  <h3 class="h6 fw-semibold mb-1">The blog shows it</h3>
+                  <p class="text-body-secondary mb-0">Posts appear newest first, each with its author's initials avatar.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Built with -->
+    <section class="container py-5 text-center">
+      <h2 class="h4 fw-bold mb-4">Built with</h2>
+      <ul class="list-inline mb-0 about-stack">
+        <li class="list-inline-item"><span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2"><i class="bi bi-bootstrap-fill me-1"></i>Bootstrap 5.3</span></li>
+        <li class="list-inline-item"><span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2"><i class="bi bi-hexagon-fill me-1"></i>Node.js</span></li>
+        <li class="list-inline-item"><span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2"><i class="bi bi-server me-1"></i>Express</span></li>
+        <li class="list-inline-item"><span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2"><i class="bi bi-braces me-1"></i>Vanilla JavaScript</span></li>
+        <li class="list-inline-item"><span class="badge rounded-pill bg-body-secondary text-body border px-3 py-2"><i class="bi bi-emoji-smile me-1"></i>Bootstrap Icons</span></li>
+      </ul>
+    </section>
+
+    <!-- Call to action -->
+    <section class="container pb-2">
+      <div class="hero rounded-4 p-4 p-md-5 text-center">
+        <h2 class="fw-bold mb-2">Ready to leave your mark?</h2>
+        <p class="text-white text-opacity-75 mb-4">Every great story starts with a single post.</p>
+        <a class="btn btn-warning btn-lg" href="/#new"><i class="bi bi-plus-lg me-1"></i>Start writing</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white-50 py-3 mt-5">
+    <div class="container text-center small">Shinobi &middot; built with Bootstrap 5</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/user.js"></script>
+</body>
+</html>
